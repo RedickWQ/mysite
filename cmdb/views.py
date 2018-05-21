@@ -22,3 +22,17 @@ def login(request):
 
 def index(request):
     return render(request, "index.html")
+
+
+USER_LIST = [
+    {"name":"Alex","email":"Alex@qq.com"},
+    {"name":"Dean","email":"Dean@163.com"},
+    {"name":"Paul","email":"Paul@baidu.com"}
+             ]
+def userManager(request):
+    if request.method == "POST":
+        u = request.POST.get("username")
+        e = request.POST.get("email")
+        user = {"name":u,"email":e}
+        USER_LIST.append(user)
+    return render(request, "user.html", {"userlist": USER_LIST})
