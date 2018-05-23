@@ -20,7 +20,7 @@ from cmdb import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index),
+    path('mainpage/', views.mainpage),
     path('login/', views.login),
     path('index/user/', views.userManager),
 ]
