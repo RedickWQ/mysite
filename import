@@ -1,0 +1,17 @@
+Django教程：https://code.ziqiangxuetang.com/django/django-schema-migration.html
+python老男孩：https://www.cnblogs.com/wupeiqi/articles/5237704.html
+
+
+
+
+
+常用指令：
+
+数据库相关：
+    -创建数据库表的临时文件
+        python manage.py makemigrations
+    -生成表
+        python manage.py migrate
+    -使用South(1.9之后的Django已经集成了South)
+        python manage.py makemigrations app_name
+        python manage.py migrate
